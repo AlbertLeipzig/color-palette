@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+$hue: 50;
+$comp-hue: $hue + 180;
+$color-light: 90%;
+
+$main-color: hsl($hue, 100%, 50%);
+$comp-color: hsl($comp-hue, 100%, 50%);
+$comp-color-light: hsl($comp-hue, 100%, $color-light);
+$grey: grey;
+$light-background: lightgray;
+$dark-background: #05203c;
+
+.main {
+  color: $main-color;
+}
+
+.secondary {
+  color: $comp-color;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5rem;
+  line-height: 1.1em;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.1rem;
+  line-height: 1.4em;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.1rem;
+  line-height: 1.6em;
+  max-width: 75ch;
+  margin-bottom: 1.5em;
+}
+
+a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.1rem;
+  line-height: 1.6em;
+  text-decoration: none;
+  color: $main-color;
+
+  &:hover {
+    color: $grey;
+  }
+
+  &:focus {
+    color: $main-color;
+    outline: $comp-color;
+  }
+
+  &:active {
+    color: $comp-color;
+    background-color: $light-background;
+  }
+}
+
+label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6em;
+}
+
+input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6em;
+}
+
+li {
+  list-style: none;
+}
+ul {
+  display: flex;
+  gap: 1rem;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: end;
+}
+
+main {
+  margin: 5vh 15vw 0;
+}
+
+footer {
+  padding: 5vh 5vw;
+}
+
+section {
+  display: block;
+  width: fit-content;
+  outline: 2px solid grey;
+  margin: 5vh auto;
+  padding: 2vh 3vw;
+
+  a::before {
+    content: '\f5ad';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: $comp-color-light;
+    padding-right: 0.5em;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+  max-width: 20vw;
+  margin: 0 auto;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  border: none;
+  background-color: none;
+  width: fit-content;
+  padding: 0.5em 1.5em;
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    color: $grey;
+  }
+
+  &:focus {
+    color: $main-color;
+    outline: $comp-color;
+  }
+
+  &:active {
+    color: $comp-color;
+    background-color: $light-background;
+  }
+}
+
+textarea {
+  min-height: 20vh;
+  resize: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  overflow-y: scroll;
+}
